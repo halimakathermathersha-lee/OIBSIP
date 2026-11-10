@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10152d">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="game-card" aria-labelledby="game-title">
+            <div class="eyebrow"><span class="sparkle">✦</span> A LITTLE CHALLENGE</div>
+            <h1 id="game-title">Guess the Number!</h1>
+            <p class="subtitle">I'm thinking of a number between <strong>1 and 100</strong>.</p>
+            <div class="number-orb" aria-hidden="true"><span>?</span></div>
+            <label for="guessInput">Enter your guess</label>
+            <form id="guessForm"><input id="guessInput" type="number" min="1" max="100" placeholder="Type a number..."
+                    required autocomplete="off"><button class="guess-button" id="guessButton" type="submit">Guess
+                    <span>→</span></button></form>
+            <div class="message" id="message" role="status" aria-live="polite">Make your first guess. Good luck!</div>
+            <div class="stats">
+                <div class="stat"><span class="stat-value" id="attemptsLeft">7</span><span class="stat-label">Attempts
+                        left</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-value" id="attemptsUsed">0</span><span class="stat-label">Attempts
+                        used</span></div>
+            </div>
+            <button class="reset-button" id="playAgain" type="button">↻ &nbsp; Play Again</button>
+            <p class="footer-note">Think carefully. You’ve got this!</p>
+        </section>
+        <p class="page-footer">NUMBER GUESSING GAME <span>•</span> BUILT WITH JAVA</p>
+    </main>
+    <section class="score-section">
+    <h2>Game History</h2>
+    <div id="roundSummary">
+        No rounds completed yet.
+    </div>
+</section>
+    <script src="/script.js"></script>
+</body>
+
+</html>
